@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Cover Template</title>
+    <title>Contact</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -80,6 +80,71 @@
         .custom-header nav {
             margin-top: 10px;
         }
+
+        .contact-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        body.light-mode .contact-card {
+            background-color: #2b2b2b;
+            border: 1px solid #555;
+            color: #f8f9fa;
+        }
+
+        body.light-mode .contact-card .card-body,
+        body.light-mode .contact-card .card-title,
+        body.light-mode .contact-card .card-text {
+            color: #f8f9fa;
+        }
+
+        body.light-mode .contact-card:hover {
+            box-shadow: 0 0.75rem 1.5rem rgba(255,255,255,.08);
+        }
+
+        body.light-mode .btn-success {
+            background-color: #198754;
+            border-color: #198754;
+            color: white;
+        }
+
+        body.light-mode .btn-success:hover {
+            background-color: #157347;
+        }
+
+        body.light-mode .btn-dark {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: white;
+        }
+
+        body.light-mode .btn-dark:hover {
+            background-color: #5c636a;
+        }
+
+        body.light-mode .alert-info {
+            background-color: #1d4f73;
+            color: #fff;
+            border-color: #2d6c96;
+        }
+
+        body.light-mode a {
+            color: #8ec5ff;
+        }
+
+        body.light-mode a:hover {
+            color: #b7dcff;
+        }
     </style>
 </head>
 
@@ -104,6 +169,46 @@
     </div>
 </div>
     </header>
+
+    <main class="px-3">
+
+        <img src="https://cdn.pixabay.com/photo/2013/07/12/13/51/surprised-147438_1280.png"
+     class="img-fluid centered d-block w-25 mx-auto"
+     alt="Home Logo image">
+        <h1>The contact page.</h1>
+
+        <p class="lead">
+            This is Mark Xavier's Contact page showcasing all theyve learned from IT0043L such as HTML & CSS, JavaScript, Web Technologies, Version Controls via Github, and Deployment via Github Pages
+        </p>
+
+                <div class="row row-cols-1 row-cols-md-2 g-3 mt-4">
+            <div class="col">
+                <div class="card contact-card h-100" onclick="window.location.href='mfalayon@fit.edu.ph'">
+                    <div class="card-body">
+                        <div class="contact-icon">✉️</div>
+                        <h5 class="card-title">Email</h5>
+                        <p class="card-text mb-2">mfalayon@fit.edu.ph</p>
+                        <button class="btn btn-success btn-sm" onclick="event.stopPropagation(); copyEmail();">
+                            Copy Email
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card contact-card h-100" onclick="window.open('https://github.com/AlayonEdu', '_blank')">
+                    <div class="card-body">
+                        <div class="contact-icon">💻</div>
+                        <h5 class="card-title">GitHub</h5>
+                        <p class="card-text mb-2">View my projects</p>
+                        <button class="btn btn-dark btn-sm" onclick="event.stopPropagation(); window.open('https://github.com/AlayonEdu', '_blank')">
+                            Open GitHub
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+    </main>
 
     <footer class="mt-auto">
         <p>
